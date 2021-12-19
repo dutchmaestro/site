@@ -21,20 +21,47 @@
             <button onmouseover="changeColor('red');">red</button>
         </div>
 
-        <div class="right">
+        <div class="right" >
             <p class="body_text">My favourite browser selection</p>
             <img class="browser_images" src="images/ff.png">
+        </div>
+        <br /><br />
+        <div class="carousel_viewport">
+            <div id="carousel">
+                <img src="images/c4.png">
+            </div>
         </div>
     </body>
 </html>
 
 <script>
+    var element = document.getElementById("carousel");
+    element.addEventListener("animationstart", listener, false);
+    element.addEventListener("animationend", listener, false);
+    element.addEventListener("animationiteration", listener, false);
+    element.className = "slidein";
+
+    function listener(event) {
+        let myImage2 = document.getElementById("carousel_img");
+        switch(event.type) {
+            case "animationstart":
+            console.log("start")
+            break;
+            case "animationend":
+            console.log("end")
+            break;
+            case "animationiteration":
+            console.log("new loop started");
+            //myImage2.setAttribute('src','images/c3.png');
+            break;
+        }
+    }
+
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     async function demo() {
-        console.log('Taking a break...');
         await sleep(5000);
         alert("Consider donating to our page");
         // Sleep in loop
@@ -45,8 +72,7 @@
             console.log(i);
         } */
     }
-
-    demo();
+    //demo();
 
     function changeColor(newColor) {
         var elem = document.getElementById('para');
