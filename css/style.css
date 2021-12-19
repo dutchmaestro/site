@@ -11,3 +11,12 @@
     background-color:cadetblue;
     float: right;
 }
+
+.browser_images {
+    width: 100px;
+    height: 100px;
+}
+
+.body_text {
+    font-family: 'Courier New', Courier, monospace;
+}

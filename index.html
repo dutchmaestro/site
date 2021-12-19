@@ -1,25 +1,36 @@
-<script>
-    function changeColor(newColor) {
-  var elem = document.getElementById('para');
-  elem.style.color = newColor;
-  console.log("I set the color to ", newColor)
-}
-</script>
-
 <html>
     <head>
-        <title>test site 1</title>
+        <title>Example site 1</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
         <div class="left">
-            <p id="para">Some text here</p>
+            <p class="body_text" id="para">Some text here</p>
             <button onclick="changeColor('blue');">blue</button>
             <button onclick="changeColor('red');">red</button>
         </div>
         <div class="right">
-            <p>right hand section</p>
+            <p class="body_text">My favourite browser selection</p>
+            <img class="browser_images" src="images/ff.png">
         </div>
     </body>
 </html>
+
+<script>
+    function changeColor(newColor) {
+        var elem = document.getElementById('para');
+        elem.style.color = newColor;
+        console.log("I set the color to ", newColor)
+    }
+
+    let myImage = document.querySelector('img');
+    myImage.onclick = function() {
+        let mySrc = myImage.getAttribute('src');
+        if(mySrc === 'images/ff.png') {
+        myImage.setAttribute('src','images/chrome.png');
+        } else {
+        myImage.setAttribute('src','images/ff.png');
+        }
+    }
+</script>
