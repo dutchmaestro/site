@@ -1,3 +1,17 @@
+.menu ul li {
+    background-color: chocolate;
+}
+
+/* accessing by HTML element */
+.menu ul li button {
+    background-color: blue;
+}
+
+.l_image {
+    width: 50%;
+    height: 50%;
+}
+
 .left {
     width: 400px;
     height: 200px;
