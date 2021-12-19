@@ -2,16 +2,24 @@
     function changeColor(newColor) {
   var elem = document.getElementById('para');
   elem.style.color = newColor;
+  console.log("I set the color to ", newColor)
 }
 </script>
 
 <html>
-<head>
-  <title>getElementById example</title>
-</head>
-<body>
-  <p id="para">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+    <head>
+        <title>test site 1</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="left">
+            <p id="para">Some text here</p>
+            <button onclick="changeColor('blue');">blue</button>
+            <button onclick="changeColor('red');">red</button>
+        </div>
+        <div class="right">
+            <p>right hand section</p>
+        </div>
+    </body>
 </html>
