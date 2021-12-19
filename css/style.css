@@ -1,8 +1,8 @@
 /* carousel CSS start */
 .carousel_viewport {
     margin-left: 20px;
-    width: 400px;
-    height: 200px;
+    width: 800px;
+    height: 300px;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -14,8 +14,8 @@
 }
 
 #carousel img {
-    width: 1200px;
-    height: 200px;
+    width: 2400px;
+    height: 300px;
 }
 
 @keyframes slidein {
@@ -24,7 +24,7 @@
     }
   
     to {
-      margin-left: -800px;
+      margin-left: -1600px;
     }
     0% { opacity: 0.7; }
     50% { opacity: 1; }
