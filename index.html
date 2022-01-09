@@ -1,42 +1,63 @@
 <html>
-    <head>
-        <title>Example site 1</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
 
-    <body>
-        <div class="menu">
-            <ul>
-                <li><button>Home</button></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html">Contact</a></li>
-                <li><a href="index.html">FAQ</a></li>
-                <li class="also_page_button">
-                    <a href="index.html">Also</a>
-                </li>
-            </ul>
-        </div>
+<head>
+    <title>Example site 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <div class="left">
-            <p class="body_text" id="para">Some text here</p>
-            <button onmouseover="changeColor('blue');">blue</button>
-            <button onmouseover="changeColor('red');">red</button>
-        </div>
+<body>
+    <div class="menu">
+        <ul>
+            <li><button>Home</button></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Contact</a></li>
+            <li><a href="index.html">FAQ</a></li>
+            <li class="also_page_button">
+                <a href="index.html">Also</a>
+            </li>
+        </ul>
+    </div>
 
-        <div class="right" >
-            <p class="body_text">My favourite browser selection</p>
-            <img class="browser_images" src="images/ff.png">
+    <div class="left">
+        <p class="body_text" id="para">Some text here</p>
+        <button onmouseover="changeColor('blue');">blue</button>
+        <button onmouseover="changeColor('red');">red</button>
+    </div>
+
+    <div class="right">
+        <p class="body_text">My favourite browser selection</p>
+        <img class="browser_images" src="images/ff.png">
+    </div>
+
+    <br /><br />
+    <div>
+        <form onsubmit="return form_submit();">
+            <label for="first_name">First name:</label><br>
+            <input type="text" id="first_name" name="first_name"><br>
+            <label for="last_name">Last name:</label><br>
+            <input type="text" id="last_name" name="last_name">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <br /><br />
+    <div class="carousel_viewport">
+        <div id="carousel">
+            <img src="images/c4.png">
         </div>
-        <br /><br />
-        <div class="carousel_viewport">
-            <div id="carousel">
-                <img src="images/c4.png">
-            </div>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
 
 <script>
+    function form_submit() {
+        var firstname = document.getElementById('first_name').value;
+        var lastname = document.getElementById('last_name').value;
+        alert('Form submitted, thank you ' + firstname + ' ' + lastname);
+        return false;
+    }
+
     var element = document.getElementById("carousel");
     element.addEventListener("animationstart", listener, false);
     element.addEventListener("animationend", listener, false);
@@ -45,17 +66,17 @@
 
     function listener(event) {
         let myImage2 = document.getElementById("carousel_img");
-        switch(event.type) {
+        switch (event.type) {
             case "animationstart":
-            console.log("start")
-            break;
+                console.log("start")
+                break;
             case "animationend":
-            console.log("end")
-            break;
+                console.log("end")
+                break;
             case "animationiteration":
-            console.log("new loop started");
-            //myImage2.setAttribute('src','images/c3.png');
-            break;
+                console.log("new loop started");
+                //myImage2.setAttribute('src','images/c3.png');
+                break;
         }
     }
 
@@ -83,12 +104,12 @@
     }
 
     let myImage = document.querySelector('img');
-    myImage.onclick = function() {
+    myImage.onclick = function () {
         let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/ff.png') {
-        myImage.setAttribute('src','images/chrome.png');
+        if (mySrc === 'images/ff.png') {
+            myImage.setAttribute('src', 'images/chrome.png');
         } else {
-        myImage.setAttribute('src','images/ff.png');
+            myImage.setAttribute('src', 'images/ff.png');
         }
     }
 </script>
