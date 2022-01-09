@@ -1,11 +1,44 @@
 <html>
-    <head>
-        <title>Our story</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
 
-    <body>
+<head>
+    <title>Our story</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="block1">
+        <img class="about_image" src="images/chrome.png">
+    </div>
+    <div id="block2">
         <p class="body_text">It all started in</p>
-        <img class="l_image" src="images/lloyd.jpeg"></img>
-    </body>
+    </div>
+    <div id="block3">
+        <form onsubmit="return form_submit();">
+            <label for="first_name">First name:</label><br>
+            <input type="text" required id="first_name" name="first_name"><br>
+
+            <label for="last_name">Last name:</label><br>
+            <input type="text" required id="last_name" name="last_name"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" required id="email" name="email"><br>
+
+            <label for="telephone">Telephone:</label><br>
+            <input type="number" id="telephone" name="telephone"><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+
 </html>
+
+<script>
+    function form_submit() {
+        var firstname = document.getElementById('first_name').value;
+        var lastname = document.getElementById('last_name').value;
+        alert('Form submitted, thank you ' + firstname + ' ' + lastname);
+        return false;
+    }
+</script>

@@ -68,3 +68,29 @@
 .body_text {
     font-family: 'Courier New', Courier, monospace;
 }
+
+#block1 {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+
+#block2 {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+
+#block3 {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 200px;
+}
+
+.about_image {
+    width: 200px;
+    height: 200px;
+}
