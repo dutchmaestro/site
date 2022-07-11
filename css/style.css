@@ -94,3 +94,19 @@
     width: 200px;
     height: 200px;
 }
+
+#block3 label {
+    border: 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.basic_data {
+    display: block;
+    float: left;
+}
+
+.message {
+    display: block;
+    float: left;
+    margin-left: 20px;
+}

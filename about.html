@@ -6,6 +6,13 @@
 </head>
 
 <body>
+    <div>
+        <iframe width="1024" height="768" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDfvAp_B14LvjT6PwnIbaWRKQFXNnUVzz0&q=Annes+Close,Kings Lynn+United+Kingdom"
+            allowfullscreen>
+        </iframe>
+    </div>
+
     <div id="block1">
         <img class="about_image" src="images/chrome.png">
     </div>
@@ -14,19 +21,26 @@
     </div>
     <div id="block3">
         <form onsubmit="return form_submit();">
-            <label for="first_name">First name:</label><br>
-            <input type="text" required id="first_name" name="first_name"><br>
+            <div class="basic_data">
+                <label for="first_name">First name:</label><br>
+                <input type="text" required id="first_name" name="first_name"><br>
 
-            <label for="last_name">Last name:</label><br>
-            <input type="text" required id="last_name" name="last_name"><br>
+                <label for="last_name">Last name:</label><br>
+                <input type="text" required id="last_name" name="last_name"><br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" required id="email" name="email"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" required id="email" name="email"><br>
 
-            <label for="telephone">Telephone:</label><br>
-            <input type="number" id="telephone" name="telephone"><br>
+                <label for="telephone">Telephone:</label><br>
+                <input type="number" id="telephone" name="telephone"><br>
+            </div>
 
-            <button type="submit">Send</button>
+            <div class="message">
+                <label for="message">message:</label><br>
+                <textarea name="message" rows="7" cols="25"></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </div>
         </form>
     </div>
 
